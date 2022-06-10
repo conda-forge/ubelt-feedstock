@@ -1,5 +1,5 @@
 {% set name = "ubelt" %}
-{% set version = "1.1.0" %}
+{% set version = "1.1.1" %}
 
 
 package:
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/ubelt-{{ version }}.tar.gz
-  sha256: 0dc2cca70c83e9a4b942c91285fb8e18502b4549beaf9ae4a2a528564257c642
+  sha256: 78f1f560fa18a390fd42e9e43696d3c46100958577425f784610ef7bec20b9ea
 
 build:
   number: 0
