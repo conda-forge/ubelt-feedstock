@@ -1,0 +1,41 @@
+schema_version: 1
+
+context:
+  name: ubelt
+  version: "1.4.3"
+
+package:
+  name: ${{ name|lower }}
+  version: ${{ version }}
+
+source:
+  url: https://files.pythonhosted.org/packages/source/${{ name[0] }}/${{ name }}/ubelt-${{ version }}.tar.gz
+  sha256: fb5e221369b9984e7a2ab19033c9f0041a937a3bf385cc37c8f9a80d44b4217d
+
+build:
+  number: 2
+  script: ${{ PYTHON }} -m pip install . -vv
+
+requirements:
+  host:
+    - pip
+    - setuptools
+    - python
+  run:
+    - python
+
+tests:
+  - python:
+      imports:
+        - ubelt
+      pip_check: true
+
+about:
+  summary: A Python utility belt containing simple tools, a stdlib like feel, and extra batteries.
+  license: Apache-2.0
+  license_file: LICENSE
+  homepage: https://github.com/Erotemic/ubelt
+
+extra:
+  recipe-maintainers:
+    - jan-janssen
